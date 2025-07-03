@@ -14,7 +14,6 @@ export const sort = (
   const heightBn = new BigNumber(height);
   const lengthBn = new BigNumber(length);
   const massBn = new BigNumber(mass);
-  const bulkyBn = new BigNumber(BULKY_VOLUME);
 
   const dimensions = [widthBn, heightBn, lengthBn, massBn];
   if (dimensions.some((dim) => dim.isNaN() || dim.lt(0))) {
@@ -26,7 +25,7 @@ export const sort = (
 
   const volume = widthBn.times(heightBn).times(lengthBn);
 
-  if (volume.gte(bulkyBn)) {
+  if (volume.gte(BULKY_VOLUME)) {
     isBulky = true;
   }
 
