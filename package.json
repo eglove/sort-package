@@ -1,5 +1,6 @@
 {
 	"devDependencies": {
+		"@vitest/coverage-v8": "^3.2.4",
 		"prettier": "^3.6.2",
 		"typescript": "^5.8.3",
 		"vitest": "^3.2.4"
@@ -8,6 +9,6 @@
 		"bignumber.js": "^9.3.0"
 	},
 	"scripts": {
-		"test": "vitest run"
+		"test": "vitest run --coverage"
 	}
 }
